@@ -1,0 +1,192 @@
+<!-- <h1>This is the show page</h1> -->
+
+
+
+
+<h1 style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><%=foundCulprit.fullName%></h1> 
+
+<div style="width:80%; margin-left: 10%; margin-top: -1rem; padding-bottom: 20px; box-shadow: 2px 2px 2px 2px gray;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+  <div style="width: 50%; position: relative; top: 10px; margin-left: 25%; height: 30%; box-shadow: 2px 2px 2px 2px gray; border-radius: 7px">
+      
+      <img style="width: 100%;height: 100%;  border-radius: 7px" src="/assets/<%=foundCulprit.passport%>" alt="">
+  </div>
+  <div style="position: relative; float: right;margin-top: -10rem; margin-right: 4rem;">
+
+        <!-- <form action="/culprits/<%=foundCulprit._id%>/edit">
+            <input type="submit" class="btn btn-lg btn-inverted" value="Edit" style="background: green; color: #ffffff; border-radius: 5%; border:none;width: 4rem; height: 2rem;">
+        </form>
+        
+        <form action="/culprits/<%=foundCulprit._id%>?_method=DELETE" method="POST">
+            <button style="background: red; color: #ffffff; border-radius: 5%; border:none;width: 4rem; height: 2rem;">Delete</button>
+        </form> -->
+
+  </div>
+<div style="display: flex; flex-direction: row; width:100%; justify-content: space-around; margin-top:2rem">
+
+        <div style="width: 40%">
+                <fieldset style="width: 100%">
+                    <legend style="color: darkblue"><strong>Culprit Information</strong></legend>
+                    <p>Name: <strong><%=foundCulprit.fullName%></strong></p>
+                    <p>Gender: <strong><%=foundCulprit.sex%></strong></p>
+                    <p>Age: <strong><%=foundCulprit.age%></strong></p>
+                    <p>LGA: <strong><%=foundCulprit.lga%></strong></p>
+                    <p>State: <strong><%=foundCulprit.state%></strong></p>
+                    <p>Contact: <strong><%=foundCulprit.phoneNumber%></strong></p>
+                    <p>Occupation: <strong><%=foundCulprit.occupation%></strong></p>
+                </fieldset>
+            
+            </div>
+            
+            <div style="width: 40%">
+              <fieldset style="width: 100%">
+              <legend style="color: darkblue"><strong>Drug Information</strong></legend>
+              <p>Drug Price: <strong><%=foundCulprit.drugPrice%></strong></p>
+              <p>Name of Drug: <strong><%=foundCulprit.nameOfDrug%></strong></p>
+              <p>Frequency of Use: <strong><%=foundCulprit.frequency%></strong></p>
+              <p>Name of Seller: <strong><%=foundCulprit.sellerName%></strong></p>
+              <p>Location of Seller: <strong><%=foundCulprit.sellerLocation%></strong></p> 
+              <p>Date: <strong><%=foundCulprit.date.toDateString()%></strong></p> 
+            </fieldset>
+          </div>
+
+</div>
+
+<div style="width: 88.5%; margin-left: 5%; margin-top: 10px; border: 2px solid gray; padding: 10px; border-radius: 5px">
+        <p> <%=foundCulprit.description%> </p>
+      </div>
+
+  </div>
+ 
+<div style="width: 80%;margin-left: 10%; margin-top: 20px;">
+    <a href="/culprits"><button style="width: 100%;height: 10%; background: #1890ff; border-radius: 10px;color: white; font-size: 36px">Go Back</button></a>
+</div>
+
+
+
+<!-- main copy, just that the legend thing disappears -->
+<!-- <h1>This is the show page</h1> -->
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Register culprit</title>
+
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/signin_signup.css" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+
+<body>
+<form action="/culprits/<%=foundCulprit._id%>/edit">
+    
+</form>
+    <h1 style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        <%=foundCulprit.fullName%>
+    </h1>
+    <form action="/culprits/<%=foundCulprit._id%>/edit">
+        <input type="submit" class="btn btn-lg btn-inverted" value="edit">
+    </form>
+
+    <div style="width:80%; margin-left: 10%; padding-bottom: 10px; box-shadow: 2px 2px 2px 2px gray;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        <div style="width: 50%;position: relative; top: 10px; margin-left: 25%; height: 30%; box-shadow: 2px 2px 2px 2px gray; border-radius: 7px">
+
+            <img style="width: 100%;height: 100%;  border-radius: 7px" src="/assets/<%=foundCulprit.passport%>" alt="">
+        </div>
+        <div style="display: flex; justify-content: space-around; color: #1890ff; margin-top: 10px">
+            <fieldset style="width: 40%">
+                <legend style="color: darkblue">Culprit Information</legend>
+                <p>Name:
+                    <strong>
+                        <%=foundCulprit.fullName%>
+                    </strong>
+                </p>
+                <p>Gender:
+                    <strong>
+                        <%=foundCulprit.sex%>
+                    </strong>
+                </p>
+                <p>Age:
+                    <strong>
+                        <%=foundCulprit.age%>
+                    </strong>
+                </p>
+                <p>LGA:
+                    <strong>
+                        <%=foundCulprit.lga%>
+                    </strong>
+                </p>
+                <p>State:
+                    <strong>
+                        <%=foundCulprit.state%>
+                    </strong>
+                </p>
+                <p>Contact:
+                    <strong>
+                        <%=foundCulprit.phoneNumber%>
+                    </strong>
+                </p>
+                <p>Occupation:
+                    <strong>
+                        <%=foundCulprit.occupation%>
+                    </strong>
+                </p>
+            </fieldset>
+
+        </div>
+
+        <div style="width: 90%; margin-left: 5%; height: 150px; box-shadow: 2px 2px 2px 2px gray; ">
+            <h2 style="text-align: center; padding-top: 10px;">Drug Information</h2>
+            <div style="width: 90%; display: flex; margin-left: 5%; justify-content: space-around">
+                <p>Drug Price:
+                    <strong>
+                        <%=foundCulprit.drugPrice%>
+                    </strong>
+                </p>
+                <p>Name of Drug:
+                    <strong>
+                        <%=foundCulprit.nameOfDrug%>
+                    </strong>
+                </p>
+                <p>Frequency of Use:
+                    <strong>
+                        <%=foundCulprit.frequency%>
+                    </strong>
+                </p>
+            </div>
+            <div style="width: 90%; display: flex; margin-left: 5%; justify-content: space-around">
+                <p>Name of Seller:
+                    <strong>
+                        <%=foundCulprit.sellerName%>
+                    </strong>
+                </p>
+                <p>Location of Seller:
+                    <strong>
+                        <%=foundCulprit.sellerLocation%>
+                    </strong>
+                </p>
+
+                <p>Date:
+                    <strong>
+                        <%=foundCulprit.date.toDateString()%>
+                    </strong>
+                </p>
+            </div>
+
+        </div>
+        <div style="width: 88.5%; margin-left: 5%; margin-top: 10px; border: 2px solid gray; padding: 10px; border-radius: 5px">
+            <p>
+                <%=foundCulprit.description%>
+            </p>
+        </div>
+    </div>
+    <div style="width: 80%;margin-left: 10%; margin-top: 20px;margin-bottom: 10px;">
+        <a href="/culprits">
+            <button style="width: 100%;height: 10%; background: #1890ff; border-radius: 10px;color: white; font-size: 36px">Go Back</button>
+        </a>
+    </div>
+     -->

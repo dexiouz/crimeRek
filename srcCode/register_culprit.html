@@ -1,0 +1,87 @@
+<% include partials/forms_header%>
+
+    <div class="reg_form">
+    <form action="/culprits" method="POST" class="form-signin">
+      <h1 class="h3 mb-3 text-center font-weight-bold">REGISTER A CULPRIT</h1>
+      <div class="row" style="margin-top: 50px; ">
+      <div class="col-6">
+      <div class="form-group" >
+          <legend class="text-center">Personal Details</legend>
+          <label for="">Full Name</label>
+          <input type="text" id="fullName" class="form-control"  placeholder="Full Name" required autofocus name="culprit[fullName]">
+        </div>
+      <div class="form-group">
+        <label for="">Age</label>
+        <input type="number" id="age" class="form-control" placeholder="Age" required autofocus name="culprit[age]">
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" class="form-control" placeholder="State" required autofocus name="culprit[state]">
+      </div>
+      <div class="form-group">
+        <label for="">Gender</label>
+        <input type="text" id="sex" class="form-control" placeholder="Gender" required name="culprit[sex]">
+      </div>
+
+      <div class="form-group">
+          <label for="">Local Government Area</label>
+          <input type="text" id="lga" class="form-control"  placeholder="Local Government Area" required autofocus name="culprit[lga]">
+        </div>
+      <div class="form-group">
+        <label for="">Phone Number</label>
+        <input type="number" id="phoneNumer" class="form-control" placeholder="Phone Number" required autofocus name="culprit[phoneNumber]">
+      </div>
+      <div class="form-group">
+        <label for="">Occupation</label>
+        <input type="text" id="occupation" class="form-control" placeholder="Occupation" required name="culprit[occupation]">
+      </div>
+    </div>
+
+      <div class="col-6">
+
+      
+      <div class="form-group">
+        <legend class="text-center">Drug details</legend>
+        <label for="">Name Of Drug</label>
+        <input type="text" id="nameOfDrug" class="form-control" placeholder="Name of Drug" required autofocus name="culprit[nameOfDrug]">
+      </div>
+      <div class="form-group">
+          <label for="">Price of Drug</label>
+          <input type="text" id="drugPrice" class="form-control"  placeholder="Drug Price" required autofocus name="culprit[drugPrice]">
+      </div>
+      <div class="form-group">
+        <label for="">Frequency of Use</label>
+        <input type="text" id="frequency" class="form-control" placeholder="Frequency of Use" required name="culprit[frequency]">
+      </div>
+
+      <div class="form-group">
+          <legend class="text-center">Details of Seller</legend>
+          <label for="">Name of Seller</label>
+          <input type="text" id="sellerName" class="form-control"  placeholder="seller's name" required autofocus name="culprit[sellerName]">
+        </div>
+      <div class="form-group">
+        <label for="">Location of Seller</label>
+        <input type="text" id="sellerLocation" class="form-control" placeholder="Seller's Location" required autofocus name="culprit[sellerLocation]">
+      </div>
+      <div class="form-group">
+        <label for="">Passport</label>
+        <input type="file" id="passport" class="form-control" placeholder="Passport" required name="culprit[passport]">
+      </div>
+      <div class="form-group">
+        <label for="">Write a brief description</label>
+        <textarea name="culprit[description]" id="description" cols="42" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+      <div class="form-group">
+        <button class="btn btn-lg btn-primary btn-block btn_custom" type="submit">Submit</button>
+      </div>
+      <div class="form-group">
+          <a href="/culprits"><button class="btn btn-lg btn-primary btn-block btn_custom" type="submit">Go Back</button></a>
+        </div>
+    
+    </form>
+  </div>
+  
+</body>
+</html>
